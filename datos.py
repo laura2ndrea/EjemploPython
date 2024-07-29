@@ -14,6 +14,6 @@ def cargar_datos():
 def guardar_datos(): 
     try: 
         with open(rutaJSON, "w", encoding="utf-8") as file: 
-            json.dump(file, data, indent=4, ensure_ascii=False)
+            json.dump(data, file, indent=4, ensure_ascii=False)
     except Exception as e: 
             print(f"Error al guardar los datos {e}")
