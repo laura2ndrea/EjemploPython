@@ -39,7 +39,7 @@ def menu_principal():
             menu_txt()
         elif opcion == "3": 
             clear()
-            print("Bienvenido a la sección 1")
+            menu_csv()
         elif opcion == "4": 
             clear()
             print("Saliendo del programa")
@@ -78,6 +78,30 @@ def menu_txt():
         if opcion == "1": 
             clear()
             crear_txt()
+        elif opcion == "2": 
+            clear()
+            print("Bienvenido a la sección 2")
+        elif opcion == "3": 
+            clear()
+            print("Bienvenido a la sección 1")
+        elif opcion == "4": 
+            clear()
+            print("Saliendo del programa")
+        elif opcion == "5": 
+            clear()
+            print("Saliendo del programa")
+            break
+        else:
+            clear()
+            print("Opción incorrecta, por favor ingrese un valor correcto")
+
+def menu_csv(): 
+    while True: 
+        print("¡Bienvenido al menú csv")
+        opcion = recorrerMenu(menuOpciones)
+        if opcion == "1": 
+            clear()
+            crear_csv()
         elif opcion == "2": 
             clear()
             print("Bienvenido a la sección 2")

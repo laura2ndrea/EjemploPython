@@ -1,4 +1,5 @@
 import json
+import csv
 
 #Función para leer y guardar un archivo json
 datajson = {}
@@ -18,7 +19,7 @@ def guardar_datos_json():
     except Exception as e: 
             print(f"Error al guardar los datos {e}")
 
-#Función para leer y guardar un archivo json
+#Función para leer y guardar un archivo txt 
 rutaTXT = "data\datos.txt"
 
 def cargar_datos_txt(): 
@@ -33,5 +34,25 @@ def guardar_datos_txt(contenido):
     try: 
         with open(rutaTXT, "a") as file:
             file.write(contenido + "\n")
+    except Exception as e: 
+        print(f"Error al guardar los datos {e}")
+
+#Función para leer y guardar un archivo csv
+rutaCSV = "data\datos.csv"
+
+def cargar_datos_csv(): 
+    try: 
+        with open(rutaCSV, "r") as file:
+            lector = csv.reader(file)
+            datos = list(lector)
+        return datos
+    except Exception as e: 
+        print(f"Error al cargar los datos {e}")
+
+def guardar_datos_csv(datos):
+    try: 
+        with open(rutaCSV, "w", newline="") as file:
+            escritor = csv.writer(file)
+            escritor.writerows(datos)
     except Exception as e: 
         print(f"Error al guardar los datos {e}")
