@@ -32,10 +32,11 @@ def menu_principal():
         print("¡Bienvenido al menú principal!")
         opcion = recorrerMenu(menuPrincipal)
         if opcion == "1": 
-            menu_secundario("JSON")
+            clear()
+            menu_json()
         elif opcion == "2": 
             clear()
-            print("Bienvenido a la sección 2")
+            menu_txt()
         elif opcion == "3": 
             clear()
             print("Bienvenido a la sección 1")
@@ -47,12 +48,36 @@ def menu_principal():
             clear()
             print("Opción incorrecta, por favor ingrese un valor correcto")
 
-def menu_secundario(opcion): 
+def menu_json(): 
     while True: 
-        print(f"¡Bienvenido al menú {opcion}")
+        print("¡Bienvenido al menú JSON")
         opcion = recorrerMenu(menuOpciones)
         if opcion == "1": 
             crear_json()
+        elif opcion == "2": 
+            clear()
+            print("Bienvenido a la sección 2")
+        elif opcion == "3": 
+            clear()
+            print("Bienvenido a la sección 1")
+        elif opcion == "4": 
+            clear()
+            print("Saliendo del programa")
+        elif opcion == "5": 
+            clear()
+            print("Saliendo del programa")
+            break
+        else:
+            clear()
+            print("Opción incorrecta, por favor ingrese un valor correcto")
+
+def menu_txt(): 
+    while True: 
+        print("¡Bienvenido al menú txt")
+        opcion = recorrerMenu(menuOpciones)
+        if opcion == "1": 
+            clear()
+            crear_txt()
         elif opcion == "2": 
             clear()
             print("Bienvenido a la sección 2")
