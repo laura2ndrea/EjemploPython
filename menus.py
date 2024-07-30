@@ -81,7 +81,7 @@ def menu_txt():
             crear_txt()
         elif opcion == "2": 
             clear()
-            print("Bienvenido a la sección 2")
+            mostrar_txt()
         elif opcion == "3": 
             clear()
             print("Bienvenido a la sección 1")

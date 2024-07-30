@@ -26,7 +26,6 @@ def buscarid(id):
             buscar = llave
             return buscar
 
-
 def actualizar_json():
     mostrar_json()
     id = input("Ingrese el ID del usuario que desea actualizar: ")
@@ -60,12 +59,15 @@ def eliminar_json():
     print("Usuario eliminado")
     guardar_datos_json()
 
+# Crud para txt 
 
 def crear_txt(): 
-    contenido = cargar_datos_txt()
-    print(contenido)
     nota = input("Escriba una nota que desea guardar: ")
     guardar_datos_txt(nota)
+
+def mostrar_txt(): 
+    contenido = cargar_datos_txt()
+    print(contenido)
 
 def crear_csv(): 
     tiempos = cargar_datos_csv()
