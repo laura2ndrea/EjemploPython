@@ -60,10 +60,9 @@ def menu_json():
             mostrar_json()
         elif opcion == "3": 
             clear()
-            print("Bienvenido a la sección 1")
         elif opcion == "4": 
             clear()
-            print("Saliendo del programa")
+            eliminar_json()
         elif opcion == "5": 
             clear()
             print("Saliendo del programa")

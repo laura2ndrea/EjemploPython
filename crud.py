@@ -20,7 +20,24 @@ def mostrar_json():
 
 def eliminar_json():
     mostrar_json()
-    print("Ingrese el ID del usuario que desea eliminar: ")
+    id = input("Ingrese el ID del usuario que desea eliminar: ")
+    llaves = datajson.keys()
+    buscar = None
+    for llave in llaves:
+        if llave == id:
+            buscar = llave
+            break
+
+    if not buscar:
+        print("El usuario no existe, ingrese el ID correctamente")
+        return
+
+    datajson.pop(buscar)
+    print("Usuario eliminado")
+    guardar_datos_json()
+
+    
+
 
 def crear_txt(): 
     contenido = cargar_datos_txt()
