@@ -60,6 +60,7 @@ def menu_json():
             mostrar_json()
         elif opcion == "3": 
             clear()
+            actualizar_json()
         elif opcion == "4": 
             clear()
             eliminar_json()

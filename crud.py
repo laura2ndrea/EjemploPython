@@ -18,25 +18,47 @@ def mostrar_json():
         for clave, valor in informacion.items():
             print(f"- {clave}: {valor}")
 
-def eliminar_json():
-    mostrar_json()
-    id = input("Ingrese el ID del usuario que desea eliminar: ")
+def buscarid(id): 
     llaves = datajson.keys()
     buscar = None
     for llave in llaves:
         if llave == id:
             buscar = llave
-            break
+            return buscar
 
-    if not buscar:
-        print("El usuario no existe, ingrese el ID correctamente")
+
+def actualizar_json():
+    mostrar_json()
+    id = input("Ingrese el ID del usuario que desea actualizar: ")
+    id_encontrado = buscarid(id)
+    if not id_encontrado: 
+        print("El usuario no existe")
         return
-
-    datajson.pop(buscar)
-    print("Usuario eliminado")
+    while True: 
+        campo = input("Seleccione el campo que desea actualizar: ").lower()
+        if campo == "nombre":
+            datajson[id_encontrado]["nombre"] = input("Ingrese el nuevo nombre: ")
+            break
+        elif campo == "telefono":
+            datajson[id_encontrado]["telefono"] = input("Ingrese el nuevo telefono: ")
+            break
+        else: 
+            print("Campo incorrecto, por favor escriba correctamente el campo")
+    print("Dato actualizado")
     guardar_datos_json()
 
-    
+def eliminar_json():
+    mostrar_json()
+    id = input("Ingrese el ID del usuario que desea eliminar: ")
+    id_encontrado = buscarid(id)
+
+    if not id_encontrado:
+        print("El usuario no existe")
+        return
+
+    datajson.pop(id_encontrado)
+    print("Usuario eliminado")
+    guardar_datos_json()
 
 
 def crear_txt(): 
