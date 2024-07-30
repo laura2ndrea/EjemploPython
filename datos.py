@@ -3,7 +3,7 @@ import csv
 
 #Función para leer y guardar un archivo json
 datajson = {}
-rutaJSON = "data\datos.json"
+rutaJSON = "data/datos.json"
 
 def cargar_datos_json(): 
     try:
@@ -20,7 +20,7 @@ def guardar_datos_json():
             print(f"Error al guardar los datos {e}")
 
 #Función para leer y guardar un archivo txt 
-rutaTXT = "data\datos.txt"
+rutaTXT = "data/datos.txt"
 
 def cargar_datos_txt(): 
     try: 
@@ -38,7 +38,7 @@ def guardar_datos_txt(contenido):
         print(f"Error al guardar los datos {e}")
 
 #Función para leer y guardar un archivo csv
-rutaCSV = "data\datos.csv"
+rutaCSV = "data/datos.csv"
 
 def cargar_datos_csv(): 
     try: 

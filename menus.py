@@ -53,10 +53,11 @@ def menu_json():
         print("¡Bienvenido al menú JSON")
         opcion = recorrerMenu(menuOpciones)
         if opcion == "1": 
+            clear()
             crear_json()
         elif opcion == "2": 
             clear()
-            print("Bienvenido a la sección 2")
+            mostrar_json()
         elif opcion == "3": 
             clear()
             print("Bienvenido a la sección 1")

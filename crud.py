@@ -1,5 +1,5 @@
 from datos import *
-
+# Crud para JSON
 def crear_json(): 
     cargar_datos_json()
     usuario={}
@@ -10,6 +10,17 @@ def crear_json():
 
     datajson[id] = usuario
     guardar_datos_json()
+
+def mostrar_json():
+    cargar_datos_json()
+    for id, informacion in datajson.items():
+        print(f"* ID: {id} ")
+        for clave, valor in informacion.items():
+            print(f"- {clave}: {valor}")
+
+def eliminar_json():
+    mostrar_json()
+    print("Ingrese el ID del usuario que desea eliminar: ")
 
 def crear_txt(): 
     contenido = cargar_datos_txt()
